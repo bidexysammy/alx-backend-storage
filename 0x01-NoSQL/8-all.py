@@ -6,5 +6,4 @@ def list_all(mongo_collection):
     """args: takes a mongo collection as argument
        return: returns a list.
     """
-   documents = mongo_collection.find()
-   return documents
+   return mongo_collection.find()
