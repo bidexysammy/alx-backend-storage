@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-""" This is a function that returns all the documents in a collection.
-"""
+""" All module. """
+from pymongo.collection import Collection
 
-def list_all(mongo_collection):
-    """args: takes a mongo collection as argument
-       return: returns a list.
+
+def list_all(mongo_collection: Collection):
     """
-   return mongo_collection.find()
+        Lists all documents in a collection.
+
+        Args:
+            mongo_collection: the collection to list.
+
+        Return:
+            The list of documents or an empty list if no documents.
+    """
+    return mongo_collection.find()
